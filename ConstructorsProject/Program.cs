@@ -1,20 +1,18 @@
-﻿namespace ConstructorsProject
+﻿using static ConstructorsProject.InterfaceDemo;
+
+namespace ConstructorsProject
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            // Using the default constructor
-            Car defaultCar = new Car();
-            defaultCar.DisplayCarInfo();  
-
-            // Using the parameterized constructor
-            Car hondaCivic = new Car("Honda", "Civic", 2022);
-            hondaCivic.DisplayCarInfo();  
-
-            // Using the copy constructor
-            Car copiedCar = new Car(hondaCivic);
-            copiedCar.DisplayCarInfo();
+            IDrawable drawable;
+            drawable = new Addition();
+            drawable.Operation();
+            drawable = new Subtraction();
+            drawable.Operation();
+            drawable = new Multiplication();
+            drawable.Operation();
         }
     }
 }
